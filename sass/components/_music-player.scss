@@ -1,0 +1,50 @@
+.music-player {
+
+    background-color: $color-black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    height: 7rem;
+    width: 100%;
+
+    &__album-cover {
+        display: inline-block;
+        height: 100%;
+        width: 7rem;
+        overflow: hidden;
+        position: relative;
+
+        &__image {
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__details{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 2rem;
+
+    }
+
+    &__controls {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 20rem;
+
+        .fas {
+            color: $color-white;
+            margin-left: 2rem;
+        }
+    }
+
+    
+}
