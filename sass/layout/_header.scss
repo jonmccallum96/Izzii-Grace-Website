@@ -10,4 +10,11 @@
         right: 0;
         bottom: 0;
     }
+
+    &__text-box {
+        position: absolute;
+        top: 6rem;
+        left: 6rem;
+        width: 50%;
+    }
 }

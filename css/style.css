@@ -76,6 +76,11 @@ body {
   line-height: 1.7;
   color: #fff; }
 
+.heading--main {
+  font-size: 20rem;
+  line-height: 18rem;
+  color: #f195d4; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -136,13 +141,62 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 20rem; }
+    margin-left: 15rem; }
     .music-player__controls .fas {
       color: #fff;
       margin-left: 2rem;
       cursor: pointer; }
       .music-player__controls .fas:hover {
         color: #f195d4; }
+  .music-player__slidecontainer {
+    position: absolute;
+    width: 60%;
+    height: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 38rem; }
+    .music-player__slidecontainer .slider {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-appearance: none;
+      appearance: none;
+      background: #333;
+      outline: none;
+      border-radius: 1rem; }
+      .music-player__slidecontainer .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        /* Override default look */
+        appearance: none;
+        width: 2.5rem;
+        /* Set a specific slider handle width */
+        height: 2.5rem;
+        /* Slider handle height */
+        background: #f195d4;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+        border-radius: 100%; }
+      .music-player__slidecontainer .slider::-moz-range-thumb {
+        width: 2.5rem;
+        /* Set a specific slider handle width */
+        height: 2.5rem;
+        /* Slider handle height */
+        background: #f195d4;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */ }
+  .music-player__timestamp {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8rem;
+    width: 3rem;
+    height: 2.5rem; }
+    .music-player__timestamp .timestamp-digits {
+      font-size: 1.5rem;
+      font-family: sans-serif; }
 
 .row {
   max-width: 114rem;
@@ -194,6 +248,11 @@ body {
     width: 700px;
     right: 0;
     bottom: 0; }
+  .header__text-box {
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+    width: 50%; }
 
 .section-about {
   height: 100vh;

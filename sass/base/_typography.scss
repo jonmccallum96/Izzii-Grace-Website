@@ -6,3 +6,12 @@ body {
     color: $color-white;
 }
 
+
+.heading {
+
+    &--main {
+        font-size: 20rem;
+        line-height: 18rem;
+        color: $color-primary;
+    }
+}
