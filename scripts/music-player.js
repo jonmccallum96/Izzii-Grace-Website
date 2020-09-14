@@ -1,3 +1,6 @@
+const slider = $("#music-slider");
+
+
 
 
 
@@ -29,10 +32,7 @@ var songSelector = 0;
 var currentSong = songs[songSelector];
 var paused = true;
 
-
-
 //control handling
-
 const playBtn = $('#play');
 const pauseBtn = $('#pause');
 const fwdBtn = $('#forward');
@@ -42,6 +42,7 @@ const backBtn = $('#back');
 function init(){
     $('#pause').hide();
     songLoad();
+    $("#music-slider").value = "10";
 }
 
 playBtn.click(function(){
@@ -86,6 +87,9 @@ function songLoad(){
     if (!paused) {
         currentSong.sound.play()
     };
+
+    slider.attr('value', currentSong.sound.currentTime);
+    slider.attr('max', currentSong.sound.duration);
 };
 
 
@@ -97,6 +101,31 @@ function stepForward(){
     };
     stopSong();
     songLoad();
+    slider.attr('value', currentSong.sound.currentTime);
 }
+
+
+setInterval(function() {
+    var mins = Math.floor(currentSong.sound.currentTime / 60);
+    var secs = Math.floor(currentSong.sound.currentTime % 60);
+    if (secs < 10) {
+      secs = '0' + String(secs);
+    }
+
+    $('#timestamp').text(mins + ':' + secs);
+
+    slider.attr('max', currentSong.sound.duration);
+    slider.val(currentSong.sound.currentTime);
+
+    if (currentSong.sound.ended === true){
+        stepForward();
+    }
+}, 1000);
+
+slider.change(function() {
+    currentSong.sound.currentTime = slider.val();
+    slider.val(currentSong.sound.currentTime);
+
+});
 
 init();
