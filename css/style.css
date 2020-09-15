@@ -109,10 +109,29 @@ body {
   z-index: 1000;
   background-color: #000;
   position: fixed;
-  bottom: 0;
+  bottom: -70px;
   left: 0;
   height: 10vh;
-  width: 100%; }
+  width: 100%;
+  transition: 1s; }
+  .music-player__toggle {
+    background-color: black;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    margin-top: -30px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer; }
+    .music-player__toggle .toggle-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      width: 90%;
+      text-align: center;
+      font-family: sans-serif; }
   .music-player__album-cover {
     display: inline-block;
     height: 100%;
@@ -247,12 +266,20 @@ body {
     position: absolute;
     width: 700px;
     right: 0;
-    bottom: 0; }
+    bottom: -10px; }
   .header__text-box {
     position: absolute;
     top: 6rem;
     left: 6rem;
     width: 50%; }
+
+.section-socials {
+  height: 10vh;
+  width: 100%;
+  background-color: #f7f7f7;
+  position: absolute;
+  z-index: 1;
+  box-shadow: -1rem -1.5rem 4rem rgba(51, 51, 51, 0.8); }
 
 .section-about {
   height: 100vh;

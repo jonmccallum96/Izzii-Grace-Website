@@ -2,11 +2,36 @@
     z-index: 1000;
     background-color: $color-black;
     position: fixed;
-    bottom: 0;
+    bottom: -70px;
     left: 0;
 
     height: 10vh;
     width: 100%;
+
+    transition: 1s;
+
+    &__toggle {
+        background-color: black;
+        width: 150px;
+        height: 40px;
+        position: absolute;
+        right: 10px;
+        margin-top: -30px;
+        border-radius: 5px 5px 0 0;
+        cursor: pointer;
+
+        .toggle-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            width: 90%;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+    }
 
     &__album-cover {
         display: inline-block;
@@ -52,6 +77,8 @@
         top: 50%;
         transform: translateY(-50%);
         margin-left: 15rem;
+
+        
 
         .fas {
             color: $color-white;

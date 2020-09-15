@@ -1,5 +1,30 @@
 const slider = $("#music-slider");
 
+const musicPlayer = $(".music-player");
+
+
+
+
+//moveup animation functionality
+
+var playerUp = false;
+
+$('.music-player__toggle').click(function(){
+
+
+    if (!playerUp) {
+        musicPlayer.css("bottom", "0px");
+        playerUp = true;
+        $('.toggle-text').text('Close Player')
+    } else if (playerUp) {
+        musicPlayer.css("bottom", "-70px"); 
+        playerUp = false;
+        $('.toggle-text').html('Listen Now&darr;')
+    }
+
+
+});
+
 
 
 
