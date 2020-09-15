@@ -90,6 +90,29 @@ body {
   position: absolute;
   left: 10rem; }
 
+.about-header {
+  font-size: 7rem;
+  font-family: sans-serif;
+  text-align: right;
+  line-height: 8rem;
+  width: 46%;
+  height: 100%; }
+
+.about-text {
+  font-size: 1.52rem;
+  font-family: sans-serif;
+  text-align: left;
+  line-height: 2rem;
+  width: 51%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: .9rem; }
+  .about-text a:link, .about-text a:visited {
+    color: #f195d4; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -312,4 +335,17 @@ body {
   background-color: #EBDEBE;
   background-image: url("../img/floralpattern.png");
   background-size: 30%;
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  position: relative; }
+  .section-about__content {
+    position: absolute;
+    left: 50%;
+    top: 15rem;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: 50vh; }
+    .section-about__content span {
+      color: #f195d4; }
+    .section-about__content a:link, .section-about__content a:visited {
+      color: #f195d4;
+      text-decoration: none; }

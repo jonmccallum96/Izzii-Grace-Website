@@ -14,4 +14,31 @@
     background-image: url('../img/floralpattern.png');
     background-size: 30%;
     background-repeat: repeat;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 15rem;
+        transform: translateX(-50%);
+        width: 70vw;
+        height: 50vh;
+
+        span {
+            color: $color-primary;
+        }
+
+        a {
+            &:link,
+            &:visited {
+                color: $color-primary;
+                text-decoration: none;
+            };
+        };
+
+  
+    }
+
+
+
 }

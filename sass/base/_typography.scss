@@ -25,3 +25,33 @@ body {
         left: 10rem;
     }
 }
+
+.about-header {
+    font-size: 7rem;
+    font-family: sans-serif;
+    text-align: right;
+    line-height: 8rem;
+    width: 46%;
+    height: 100%;
+}
+
+.about-text {
+    font-size: 1.52rem;
+    font-family: sans-serif;
+    text-align: left;
+    line-height: 2rem;
+    width: 51%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: .9rem;
+
+    a {
+        &:link,
+        &:visited {
+            color: $color-primary;
+        };
+    };
+}
