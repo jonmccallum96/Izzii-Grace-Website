@@ -13,13 +13,14 @@ $('.music-player__toggle').click(function(){
 
 
     if (!playerUp) {
-        musicPlayer.css("bottom", "0px");
+        musicPlayer.css("bottom", "0vh");
         playerUp = true;
-        $('.toggle-text').text('Close Player')
+        $('.toggle-text').text('Close Player X');
     } else if (playerUp) {
-        musicPlayer.css("bottom", "-70px"); 
+        musicPlayer.css("bottom", "-10vh"); 
         playerUp = false;
-        $('.toggle-text').html('Listen Now&darr;')
+        $('.toggle-text').html('Listen Now&darr;');
+        pause();
     }
 
 
@@ -77,11 +78,16 @@ playBtn.click(function(){
     paused = false;
 });
 
-pauseBtn.click(function(){
+
+function pause(){
     currentSong.sound.pause();
     playBtn.show();
     pauseBtn.hide();
     paused = true;
+}
+
+pauseBtn.click(function(){
+    pause();
 });
 
 fwdBtn.click(function(){

@@ -76,6 +76,11 @@ body {
   line-height: 1.7;
   color: #fff; }
 
+.heading--main {
+  font-size: 20rem;
+  line-height: 18rem;
+  color: #f195d4; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -102,14 +107,126 @@ body {
 
 .music-player {
   z-index: 1000;
-  height: 100vh;
-  width: 50%; }
-  .music-player__body {
-    background-color: yellow;
-    position: fixed;
-    bottom: 0px;
-    height: 100px;
-    width: 50%; }
+  background-color: #000;
+  position: fixed;
+  bottom: -70px;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  transition: 1s; }
+  .music-player__toggle {
+    background-color: black;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    margin-top: -30px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer; }
+    .music-player__toggle .toggle-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      width: 90%;
+      text-align: center;
+      font-family: sans-serif; }
+  .music-player__album-cover {
+    display: inline-block;
+    height: 100%;
+    width: 7rem;
+    overflow: hidden;
+    position: relative; }
+    .music-player__album-cover__image {
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .music-player__details {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 2rem;
+    font-size: 1.3rem; }
+    .music-player__details--title {
+      font-family: sans-serif; }
+    .music-player__details--artist {
+      font-family: nothing you could do; }
+  .music-player__controls {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15rem; }
+    .music-player__controls .fas {
+      color: #fff;
+      margin-left: 2rem;
+      cursor: pointer; }
+      .music-player__controls .fas:hover {
+        color: #f195d4; }
+  .music-player__slidecontainer {
+    position: absolute;
+    width: 60%;
+    height: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 38rem; }
+    .music-player__slidecontainer .slider {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-appearance: none;
+      appearance: none;
+      background: #333;
+      outline: none;
+      border-radius: 1rem; }
+      .music-player__slidecontainer .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        /* Override default look */
+        appearance: none;
+        width: 2.5rem;
+        /* Set a specific slider handle width */
+        height: 2.5rem;
+        /* Slider handle height */
+        background: #f195d4;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */
+        border-radius: 100%; }
+      .music-player__slidecontainer .slider::-moz-range-thumb {
+        width: 2.5rem;
+        /* Set a specific slider handle width */
+        height: 2.5rem;
+        /* Slider handle height */
+        background: #f195d4;
+        /* Green background */
+        cursor: pointer;
+        /* Cursor on hover */ }
+  .music-player__timestamp {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8rem;
+    width: 3rem;
+    height: 2.5rem; }
+    .music-player__timestamp .timestamp-digits {
+      font-size: 1.5rem;
+      font-family: sans-serif; }
+
+.socials {
+  width: 95vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: red; }
 
 .row {
   max-width: 114rem;
@@ -153,5 +270,32 @@ body {
 
 .header {
   width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(#000, #2F291A);
+  position: relative; }
+  .header__profile {
+    position: absolute;
+    width: 700px;
+    right: 0;
+    bottom: -10px; }
+  .header__text-box {
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+    width: 50%; }
+
+.section-socials {
+  height: 10vh;
+  width: 100%;
+  background-color: #f7f7f7;
+  position: absolute;
+  z-index: 1;
+  box-shadow: -1rem -1.5rem 4rem rgba(51, 51, 51, 0.8); }
+
+.section-about {
   height: 100vh;
-  background-image: linear-gradient(#000, #2F291A); }
+  width: 100%;
+  background-color: #EBDEBE;
+  background-image: url("../img/floralpattern.png");
+  background-size: 30%;
+  background-repeat: repeat; }

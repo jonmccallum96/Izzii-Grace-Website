@@ -81,6 +81,15 @@ body {
   line-height: 18rem;
   color: #f195d4; }
 
+.heading--sub {
+  width: 50rem;
+  font-size: 3rem;
+  font-family: 'Nothing You Could Do', cursive;
+  line-height: 18rem;
+  color: #fff;
+  position: absolute;
+  left: 10rem; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -109,7 +118,7 @@ body {
   z-index: 1000;
   background-color: #000;
   position: fixed;
-  bottom: -70px;
+  bottom: -10vh;
   left: 0;
   height: 10vh;
   width: 100%;
@@ -216,6 +225,22 @@ body {
     .music-player__timestamp .timestamp-digits {
       font-size: 1.5rem;
       font-family: sans-serif; }
+
+.socials {
+  width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .socials__icon {
+    transition: .4s; }
+    .socials__icon:link, .socials__icon:visited {
+      color: #D0B26C; }
+    .socials__icon:hover {
+      color: #f195d4; }
 
 .row {
   max-width: 114rem;

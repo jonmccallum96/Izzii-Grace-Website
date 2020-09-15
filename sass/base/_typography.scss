@@ -14,4 +14,14 @@ body {
         line-height: 18rem;
         color: $color-primary;
     }
+
+    &--sub {
+        width: 50rem;
+        font-size: 3rem;
+        font-family: 'Nothing You Could Do', cursive;
+        line-height: 18rem;
+        color: $color-white;
+        position: absolute;
+        left: 10rem;
+    }
 }
