@@ -110,8 +110,6 @@ body {
   right: 0;
   top: 0;
   margin-top: .9rem; }
-  .about-text a:link, .about-text a:visited {
-    color: #f195d4; }
 
 .u-center-text {
   text-align: center !important; }
@@ -145,7 +143,7 @@ body {
   left: 0;
   height: 10vh;
   width: 100%;
-  transition: 1s; }
+  transition: .5s; }
   .music-player__toggle {
     background-color: black;
     width: 150px;
@@ -263,7 +261,24 @@ body {
     .socials__icon:link, .socials__icon:visited {
       color: #D0B26C; }
     .socials__icon:hover {
-      color: #f195d4; }
+      color: #f195d4;
+      transform: scale(1.2); }
+
+.footer {
+  background-color: #000;
+  height: 10vh;
+  position: relative; }
+  .footer__content {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .footer__content a:link,
+    .footer__content a:visited {
+      color: #D0B26C; }
 
 .row {
   max-width: 114rem;
@@ -330,7 +345,7 @@ body {
   box-shadow: -1rem -1.5rem 4rem rgba(51, 51, 51, 0.8); }
 
 .section-about {
-  height: 100vh;
+  height: 117vh;
   width: 100%;
   background-color: #EBDEBE;
   background-image: url("../img/floralpattern.png");
@@ -343,9 +358,36 @@ body {
     top: 15rem;
     transform: translateX(-50%);
     width: 70vw;
-    height: 50vh; }
+    height: 40vh; }
     .section-about__content span {
       color: #f195d4; }
     .section-about__content a:link, .section-about__content a:visited {
       color: #f195d4;
       text-decoration: none; }
+  .section-about__images {
+    position: absolute;
+    left: 50%;
+    top: 45rem;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: 40vh;
+    text-align: center; }
+    .section-about__images [class^="about-image--"] {
+      position: absolute;
+      box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.8);
+      transition: .8s;
+      cursor: pointer; }
+      .section-about__images [class^="about-image--"]:hover {
+        transform: scale(1.2) translateY(-1rem);
+        z-index: 1;
+        box-shadow: 0.3rem 0.3rem 1.8rem rgba(0, 0, 0, 0.8); }
+    .section-about__images .about-image--1 {
+      height: 14.2rem;
+      left: 50rem; }
+    .section-about__images .about-image--2 {
+      height: 27.6rem;
+      left: 20rem; }
+    .section-about__images .about-image--3 {
+      height: 12rem;
+      left: 50rem;
+      bottom: 0; }

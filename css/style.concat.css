@@ -81,6 +81,38 @@ body {
   line-height: 18rem;
   color: #f195d4; }
 
+.heading--sub {
+  width: 50rem;
+  font-size: 3rem;
+  font-family: 'Nothing You Could Do', cursive;
+  line-height: 18rem;
+  color: #fff;
+  position: absolute;
+  left: 10rem; }
+
+.about-header {
+  font-size: 7rem;
+  font-family: sans-serif;
+  text-align: right;
+  line-height: 8rem;
+  width: 46%;
+  height: 100%; }
+
+.about-text {
+  font-size: 1.52rem;
+  font-family: sans-serif;
+  text-align: left;
+  line-height: 2rem;
+  width: 51%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: .9rem; }
+  .about-text a:link, .about-text a:visited {
+    color: #f195d4; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -109,11 +141,11 @@ body {
   z-index: 1000;
   background-color: #000;
   position: fixed;
-  bottom: -70px;
+  bottom: -10vh;
   left: 0;
   height: 10vh;
   width: 100%;
-  transition: 1s; }
+  transition: .5s; }
   .music-player__toggle {
     background-color: black;
     width: 150px;
@@ -218,15 +250,20 @@ body {
       font-family: sans-serif; }
 
 .socials {
-  width: 95vw;
+  width: 50vw;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  background-color: red; }
+  justify-content: space-between; }
+  .socials__icon {
+    transition: .4s; }
+    .socials__icon:link, .socials__icon:visited {
+      color: #D0B26C; }
+    .socials__icon:hover {
+      color: #f195d4; }
 
 .row {
   max-width: 114rem;
@@ -293,9 +330,22 @@ body {
   box-shadow: -1rem -1.5rem 4rem rgba(51, 51, 51, 0.8); }
 
 .section-about {
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   background-color: #EBDEBE;
   background-image: url("../img/floralpattern.png");
   background-size: 30%;
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  position: relative; }
+  .section-about__content {
+    position: absolute;
+    left: 50%;
+    top: 15rem;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: 40vh; }
+    .section-about__content span {
+      color: #f195d4; }
+    .section-about__content a:link, .section-about__content a:visited {
+      color: #f195d4;
+      text-decoration: none; }

@@ -9,9 +9,23 @@ const musicPlayer = $(".music-player");
 
 var playerUp = false;
 
+
+
+
+
 $('.music-player__toggle').click(function(){
 
+playerToggle();
 
+});
+
+$('.album-image').click(function(){
+
+playerToggle();
+
+});
+
+function playerToggle() {
     if (!playerUp) {
         musicPlayer.css("bottom", "0vh");
         playerUp = true;
@@ -22,11 +36,7 @@ $('.music-player__toggle').click(function(){
         $('.toggle-text').html('Listen Now&darr;');
         pause();
     }
-
-
-});
-
-
+}
 
 
 

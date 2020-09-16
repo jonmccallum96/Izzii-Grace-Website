@@ -1,0 +1,20 @@
+.footer {
+    background-color: $color-black;
+    height: 10vh;
+    position: relative;
+
+    &__content {
+        font-family: sans-serif;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        a:link,
+        a:visited {
+            color: $color-secondary;
+        }
+    }
+}
