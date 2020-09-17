@@ -268,6 +268,15 @@ body {
     top: 50%;
     transform: translateY(-50%);
     left: 38rem; }
+    @media only screen and (max-width: 75em) {
+      .music-player__slidecontainer {
+        width: 50%; } }
+    @media only screen and (max-width: 56.25em) {
+      .music-player__slidecontainer {
+        width: 40%; } }
+    @media only screen and (max-width: 37.5em) {
+      .music-player__slidecontainer {
+        width: 30%; } }
     .music-player__slidecontainer .slider {
       position: absolute;
       width: 100%;
@@ -391,7 +400,7 @@ body {
   position: relative; }
   .header__profile {
     position: absolute;
-    width: 60%;
+    width: 58%;
     right: 0;
     bottom: -10px; }
     @media only screen and (max-width: 56.25em) {

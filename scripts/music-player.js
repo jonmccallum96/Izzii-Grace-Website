@@ -1,25 +1,30 @@
+
+
+
+
+//selector declarations
+
 const slider = $("#music-slider");
 
 const musicPlayer = $(".music-player");
 
+const toggle = $('.music-player__toggle');
+
+const img = $('.album-image')
 
 
-
-//moveup animation functionality
+//Player up / down toggler
 
 var playerUp = false;
 
 
-
-
-
-$('.music-player__toggle').click(function(){
+toggle.click(function(){
 
 playerToggle();
 
 });
 
-$('.album-image').click(function(){
+img.click(function(){
 
 playerToggle();
 
@@ -37,8 +42,6 @@ function playerToggle() {
         pause();
     }
 }
-
-
 
 //constructor for new songs
 function Song(title, album, year, artist, aSrc, img){
@@ -74,20 +77,12 @@ const pauseBtn = $('#pause');
 const fwdBtn = $('#forward');
 const backBtn = $('#back');
 
-
-function init(){
-    $('#pause').hide();
-    songLoad();
-    $("#music-slider").value = "10";
-}
-
 playBtn.click(function(){
     currentSong.sound.play();
     playBtn.hide();
     pauseBtn.show();
     paused = false;
 });
-
 
 function pause(){
     currentSong.sound.pause();
@@ -114,10 +109,30 @@ backBtn.click(function(){
     songLoad();
 });
 
+
+//playback handling
+
 function stopSong(){
     currentSong.sound.pause();
     currentSong.sound.currentTime = 0;
 }
+
+function stepForward(){
+    if (songSelector < 2 ){
+        songSelector ++;
+    } else { 
+        songSelector = 0;
+    };
+    stopSong();
+    songLoad();
+    slider.attr('value', currentSong.sound.currentTime);
+}
+
+slider.change(function() {
+    currentSong.sound.currentTime = slider.val();
+    slider.val(currentSong.sound.currentTime);
+
+});
 
 //song loader
 function songLoad(){
@@ -133,19 +148,7 @@ function songLoad(){
     slider.attr('max', currentSong.sound.duration);
 };
 
-
-function stepForward(){
-    if (songSelector < 2 ){
-        songSelector ++;
-    } else { 
-        songSelector = 0;
-    };
-    stopSong();
-    songLoad();
-    slider.attr('value', currentSong.sound.currentTime);
-}
-
-
+//Tick handling
 setInterval(function() {
     var mins = Math.floor(currentSong.sound.currentTime / 60);
     var secs = Math.floor(currentSong.sound.currentTime % 60);
@@ -163,10 +166,11 @@ setInterval(function() {
     }
 }, 1000);
 
-slider.change(function() {
-    currentSong.sound.currentTime = slider.val();
-    slider.val(currentSong.sound.currentTime);
-
-});
+//initializer
+function init(){
+    $('#pause').hide();
+    songLoad();
+    $("#music-slider").value = "10";
+}
 
 init();

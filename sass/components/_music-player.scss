@@ -78,6 +78,7 @@
         transform: translateY(-50%);
         margin-left: 15rem;
 
+
         
 
         .fas {
@@ -99,6 +100,17 @@
         top: 50%;
         transform: translateY(-50%);
         left: 38rem;
+
+        @include respond(tab-land) {
+            width: 50%;
+        }
+
+        @include respond(tab-port) {
+            width: 40%;
+        }
+        @include respond(phone) {
+            width: 30%;
+        }
 
         .slider {
             position: absolute;

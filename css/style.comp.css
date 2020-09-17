@@ -100,6 +100,10 @@ body {
   line-height: 8rem;
   width: 46%;
   height: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .about-header {
+      font-size: 6rem;
+      width: 40%; } }
 
 .about-text {
   font-size: 1.52rem;
@@ -139,9 +143,19 @@ body {
   margin-top: 10rem !important; }
 
 .composition {
-  position: relative; }
+  position: absolute;
+  width: 70vw;
+  height: 50rem;
+  left: 50%;
+  top: 50rem;
+  transform: translate(-50%); }
+  @media only screen and (max-width: 56.25em) {
+    .composition {
+      height: 20rem;
+      top: 55rem; } }
   .composition__photo {
-    width: 1rem;
+    cursor: pointer;
+    width: 40rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 2px;
     position: absolute;
@@ -377,15 +391,16 @@ body {
   position: relative; }
   .header__profile {
     position: absolute;
-    width: 70rem;
+    width: 60%;
     right: 0;
     bottom: -10px; }
     @media only screen and (max-width: 56.25em) {
       .header__profile {
-        width: 60rem; } }
+        width: 70%; } }
     @media only screen and (max-width: 37.5em) {
       .header__profile {
-        left: 10%; } }
+        left: 10%;
+        width: 60rem; } }
   .header__text-box {
     position: absolute;
     top: 6rem;
@@ -404,13 +419,16 @@ body {
   box-shadow: -1rem -1.5rem 4rem rgba(51, 51, 51, 0.8); }
 
 .section-about {
-  height: 140vh;
+  height: 100rem;
   width: 100%;
   background-color: #EBDEBE;
   background-image: url("../img/floralpattern.png");
   background-size: 30%;
   background-repeat: repeat;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .section-about {
+      height: 80rem; } }
   .section-about__content {
     position: absolute;
     left: 50%;
