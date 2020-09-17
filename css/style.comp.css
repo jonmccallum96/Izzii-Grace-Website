@@ -89,6 +89,9 @@ body {
   color: #fff;
   position: absolute;
   left: 10rem; }
+  @media only screen and (max-width: 56.25em) {
+    .heading--sub {
+      margin-top: -2rem; } }
 
 .about-header {
   font-size: 7rem;
@@ -110,8 +113,6 @@ body {
   right: 0;
   top: 0;
   margin-top: .9rem; }
-  .about-text a:link, .about-text a:visited {
-    color: #f195d4; }
 
 .u-center-text {
   text-align: center !important; }
@@ -136,6 +137,53 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem !important; }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .composition__photo {
+        float: left;
+        position: relative;
+        width: 33.33333333%;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); } }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p1 {
+          top: 0;
+          transform: scale(1.2); } }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p2 {
+          top: -1rem;
+          transform: scale(1.3);
+          z-index: 100; } }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo--p3 {
+          top: 1rem;
+          left: 0;
+          transform: scale(1.1); } }
+    .composition__photo:hover {
+      outline: 1.5rem solid #f195d4;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
 
 .music-player {
   z-index: 1000;
@@ -263,7 +311,24 @@ body {
     .socials__icon:link, .socials__icon:visited {
       color: #D0B26C; }
     .socials__icon:hover {
-      color: #f195d4; }
+      color: #f195d4;
+      transform: scale(1.2); }
+
+.footer {
+  background-color: #000;
+  height: 10vh;
+  position: relative; }
+  .footer__content {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    .footer__content a:link,
+    .footer__content a:visited {
+      color: #D0B26C; }
 
 .row {
   max-width: 114rem;
@@ -312,14 +377,23 @@ body {
   position: relative; }
   .header__profile {
     position: absolute;
-    width: 700px;
+    width: 70rem;
     right: 0;
     bottom: -10px; }
+    @media only screen and (max-width: 56.25em) {
+      .header__profile {
+        width: 60rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__profile {
+        left: 10%; } }
   .header__text-box {
     position: absolute;
     top: 6rem;
     left: 6rem;
     width: 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .header__text-box {
+        top: 4rem; } }
 
 .section-socials {
   height: 10vh;
@@ -330,7 +404,7 @@ body {
   box-shadow: -1rem -1.5rem 4rem rgba(51, 51, 51, 0.8); }
 
 .section-about {
-  height: 70vh;
+  height: 140vh;
   width: 100%;
   background-color: #EBDEBE;
   background-image: url("../img/floralpattern.png");
@@ -344,6 +418,9 @@ body {
     transform: translateX(-50%);
     width: 70vw;
     height: 40vh; }
+    @media only screen and (max-width: 75em) {
+      .section-about__content {
+        width: 90vw; } }
     .section-about__content span {
       color: #f195d4; }
     .section-about__content a:link, .section-about__content a:visited {

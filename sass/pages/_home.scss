@@ -8,13 +8,17 @@
 }
 
 .section-about  {
-    height: 117vh;
+    height: 100rem;
     width: 100%;
     background-color:$color-secondary-light;
     background-image: url('../img/floralpattern.png');
     background-size: 30%;
     background-repeat: repeat;
     position: relative;
+
+    @include respond(phone) {
+        height: 80rem;
+    }
 
     &__content {
         position: absolute;
@@ -23,6 +27,10 @@
         transform: translateX(-50%);
         width: 70vw;
         height: 40vh;
+
+        @include respond(tab-land) {
+            width: 90vw;
+        }
 
         span {
             color: $color-primary;
@@ -35,47 +43,6 @@
                 text-decoration: none;
             };
         };
-
-  
     }
-
-    &__images {
-        position: absolute;
-        left: 50%;
-        top: 45rem;
-        transform: translateX(-50%);
-        width: 70vw;
-        height: 40vh;
-        text-align: center;
-
-
-        [class^="about-image--"] {
-            position: absolute;
-            box-shadow: .3rem .3rem 1rem rgba($color-black, .8);
-            transition: .8s;
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.2) translateY(-1rem);
-                z-index: 1;
-                box-shadow: .3rem .3rem 1.8rem rgba($color-black, .8);
-            }
-        }
-        .about-image--1 {
-            height: 14.2rem;
-            left: 50rem;
-        }
-        .about-image--2 {
-            height: 27.6rem;
-            left: 20rem;
-        }
-        .about-image--3 {
-            height: 12rem;
-            left: 50rem;
-            bottom: 0;
-        }
-    }
-
-
 
 }

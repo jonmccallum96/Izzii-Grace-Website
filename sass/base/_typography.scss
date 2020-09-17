@@ -9,6 +9,7 @@ body {
 
 .heading {
 
+
     &--main {
         font-size: 20rem;
         line-height: 18rem;
@@ -23,6 +24,10 @@ body {
         color: $color-white;
         position: absolute;
         left: 10rem;
+
+        @include respond(tab-port) {
+            margin-top: -2rem;
+        }
     }
 }
 
@@ -33,6 +38,12 @@ body {
     line-height: 8rem;
     width: 46%;
     height: 100%;
+
+    @include respond(tab-port) {
+        font-size: 6rem;
+        width: 40%;
+    }
+
 }
 
 .about-text {
